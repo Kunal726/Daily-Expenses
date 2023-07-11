@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UpdateExpense">
+
+    <TableLayout
+        android:id="@+id/tbl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <!-- Date -->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/label_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_date"
+                android:inputType="none"
+                android:clickable="true"
+                android:focusable="false"
+                android:longClickable="false"
+
+                android:textSize="18sp"/>
+        </TableRow>
+
+        <!-- Amount -->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/label_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_amount"
+                android:textSize="18sp"
+                android:inputType="numberDecimal"
+                android:clickable="true"
+                android:longClickable="false"/>
+        </TableRow>
+
+        <!-- Category -->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/label_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_category"
+                android:textSize="18sp"
+                android:inputType="none"
+                android:clickable="true"
+                android:focusable="false"
+                android:longClickable="false"/>
+        </TableRow>
+
+        <!-- Description -->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/label_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_description"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:longClickable="false"
+                android:inputType="text"/>
+        </TableRow>
+
+        <!-- Image -->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/label_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/edit_image"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                android:src="@drawable/camera"
+                android:contentDescription="@string/select_image" />
+        </TableRow>
+
+    </TableLayout>
+
+    <!-- Save and Continue Buttons -->
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_below="@id/tbl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/red"/>
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/delete"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/category_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout"
+        android:visibility="gone">
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_row_border">
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/food"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/travel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/travel"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/recharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/recharge"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_row_border">
+
+            <TextView
+                android:id="@+id/stationary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/stationary"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/appeareal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/apparel"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/grooming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/grooming"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_row_border">
+
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/health"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/education"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/education"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/gift"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_row_border">
+
+            <TextView
+                android:id="@+id/other"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_cell_border"
+                android:padding="3dp"
+                android:text="@string/other"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

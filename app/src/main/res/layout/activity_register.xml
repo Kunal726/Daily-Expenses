@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/app_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewIcon"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/name"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/email"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginTop="40dp"
+        android:text="@string/register"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"/>
+
+
+</RelativeLayout>

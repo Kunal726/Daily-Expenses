@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyExpense"
+    android:paddingTop="5dp"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="5dp">
+
+    <com.kunalkulthe.dailyexpenses.adapter.MonthSpinnerAdapter
+        android:id="@+id/spinMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageButton
+        android:id="@+id/sync_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_sync"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/sync_data"/>
+
+
+    <TextView
+        android:id="@+id/total_Expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinMonth"
+        android:layout_margin="5dp"
+        android:text="@string/expenses"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:textSize="23sp"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@id/total_Expense"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/details_recycle_daily"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_line"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:contentDescription="@string/add_expense"
+        android:src="@drawable/baseline_add_24" />
+
+</RelativeLayout>

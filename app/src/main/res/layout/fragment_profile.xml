@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/app_icon"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/username"
+        android:layout_below="@id/imageViewIcon"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/user_id"
+        android:layout_below="@id/textViewUsername"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/email"
+        android:layout_below="@id/textViewUserId"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="#AF27BC"
+        android:textSize="25sp"
+        android:drawablePadding="8dp"
+        android:layout_below="@id/textViewEmail"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
